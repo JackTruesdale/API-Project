@@ -11,7 +11,7 @@ const NewYork = () => {
 
 useEffect(() => {
   
-
+// pulls API data from the boston station
  // https://api.openweathermap.org/data/2.5/weather?lat=63&lon=64&appid=9cd8d470903604ff83b3e6cb10572158
   axios.get('https://api.openweathermap.org/data/2.5/weather?lat=41&lon=74&appid=9cd8d470903604ff83b3e6cb10572158')
   .then(res => {
@@ -26,6 +26,8 @@ useEffect(() => {
         descriptor: newYorkData.weather.main, 
         temp_min: newYorkData.main.temp_min, 
         temp_max: newYorkData.main.temp_max,
+
+                // assigning variables from the api in a data set
 
         
         country: newYorkData.sys.country,

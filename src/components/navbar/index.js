@@ -17,6 +17,8 @@ const Navbar = () => {
                             <p style={{ color: 'purple', fontSize: '60px', fontFamily: 'Cursive' }}>Jack's Api Weather Project</p>
                         </div>
 
+                        {/* Adds more fancy texts+styles */}
+
 
 
 
@@ -30,6 +32,8 @@ const Navbar = () => {
                         <NavLink to="/newYork" activeStyle={{ fontSize: '60px', fontFamily: 'Bookman' }}>
                             New York
                         </NavLink>
+
+                        {/* Creating a navigation bar at the top of the code */}
                         <NavLink to="/boston" activeStyle={{ fontSize: '60px', fontFamily: 'Bookman' }}>
                             Boston
                         </NavLink>

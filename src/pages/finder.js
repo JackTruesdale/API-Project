@@ -17,6 +17,7 @@ const Finder = () => {
   const handleChange = (event) => {
     setValue(event.target.value);
     console.log(value);
+    // Sets value of value from the textfield
     
   }
 
@@ -26,7 +27,7 @@ const Finder = () => {
 
 useEffect(() => {
   
-
+// gets data from the api (determined by what number typed into the textfield)
   axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${value}&lon=${value}&appid=9cd8d470903604ff83b3e6cb10572158`)
   .then(res => {
       console.log('Response from main API: ', res)
@@ -71,21 +72,24 @@ useEffect(() => {
       <p style={{ color: 'red', fontSize: '20px', fontFamily: 'monospace' }}>Temperature Feels Like: {Data.feels_like-200}</p>
       </div>
 
+
+{/* Adds fancy coloring and font */}
+
       <div>
       <p style={{ color: 'red', fontSize: '20px', fontFamily: 'monospace' }}>Maximum Temperature Today: {Data.temp_max-200}</p>
       </div>
 
-
+{/* Adds fancy coloring and font */}
       <div>
       <p style={{ color: 'red', fontSize: '20px', fontFamily: 'monospace' }}>Minimum Temperature Today: {Data.temp_min-200}</p>
       </div>
-
+{/* Adds fancy coloring and font */}
 
       <div>
       <p style={{ color: 'red', fontSize: '20px', fontFamily: 'monospace' }}>Wind Speed: {Data.speed}</p>
       </div>
 
-
+{/* Adds fancy coloring and font */}
 
       <div>
       <p style={{ color: 'red', fontSize: '20px', fontFamily: 'monospace' }}>Wind Direction: {Data.deg}</p>
@@ -95,6 +99,8 @@ useEffect(() => {
       <p style={{ color: 'red', fontSize: '20px', fontFamily: 'monospace' }}>Country of Station: {Data.country}</p>
       </div>
 
+{/* Adds fancy coloring and font */}
+
       <div>
       <p style={{ color: 'blue', fontSize: '20px', fontFamily: 'cursive' }}>New Feature: Enter Longitude and Latitude!</p>
     </div>
@@ -102,7 +108,7 @@ useEffect(() => {
     
 
 
-
+{/* Adds fancy coloring and font */}
 
     <div style={{ display: 'flex' }}>
       <p style={{ fontSize: '40px', fontWeight: 'bold' }}>Latitude & Longitude:</p>
@@ -124,6 +130,9 @@ useEffect(() => {
       <input type="text" valueOne={value} onChange={handleChange} />
       
     </div>
+
+
+    {/* Sets up textbox to recieve information*/}
     
       
 

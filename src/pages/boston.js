@@ -10,7 +10,7 @@ const Boston = () => {
 
 useEffect(() => {
   
-
+// pulls API data from the boston station
   axios.get('https://api.openweathermap.org/data/2.5/weather?lat=42&lon=71&appid=9cd8d470903604ff83b3e6cb10572158')
   .then(res => {
       console.log('Response from main API: ', res)
@@ -24,6 +24,8 @@ useEffect(() => {
         descriptor: bostonData.weather.main, 
         temp_min: bostonData.main.temp_min, 
         temp_max: bostonData.main.temp_max,
+
+        // assigning variables from the api in a data set
         
         country: bostonData.sys.country,
         visibility: bostonData.sys.visibility,
@@ -55,6 +57,8 @@ useEffect(() => {
       <div>
       <p style={{ color: 'red', fontSize: '20px', fontFamily: 'monospace' }}>Maximum Temperature Today: {Data.temp_max-200}</p>
       </div>
+
+      {/* More fancy text and styling */}
 
 
       <div>
